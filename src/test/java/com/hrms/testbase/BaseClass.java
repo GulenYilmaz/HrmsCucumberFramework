@@ -1,7 +1,4 @@
 package com.hrms.testbase;
-
-//http://extentreports.com/docs/versions/4/java/v3-html-reporter.html
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -21,6 +18,7 @@ public class BaseClass {
 	public static WebDriver setUp() {
 
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
+		ConfigsReader.readProperties(Constants.CONFIGURATION_FILEPATH);
 
 		switch (ConfigsReader.getProperty("browser").toLowerCase()) {
 
@@ -43,7 +41,6 @@ public class BaseClass {
 		PageInitializer.initialize();
 
 		return driver;
-
 	}
 
 	public static void tearDown() {

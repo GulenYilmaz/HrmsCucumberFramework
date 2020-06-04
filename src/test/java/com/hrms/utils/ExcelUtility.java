@@ -7,7 +7,6 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-
 public class ExcelUtility {
 	private static Workbook book;
 	private static Sheet sheet;
@@ -45,29 +44,17 @@ public class ExcelUtility {
 		int rows = rowCount();
 		int cols = colsCount(0);
 
-		
-		
-		Object[][] data = new Object[rows - 1][cols];// but we need zero rows to restore our data to 2 dimensional array
+		Object[][] data = new Object[rows - 1][cols];
 
 		// iterating rows
-		for (int i = 1; i < rows; i++) {//we do not need keys or headers //eliminate header
-
+		for (int i = 1; i < rows; i++) {
 			// iterating cols
 			for (int j = 0; j < cols; j++) {
-				
-				//retrieving value from excel by specified row and colums
+				//storing values into 2D array 
 				data[i - 1][j] = cellData(i, j);
 			}
 		}
 
 		return data;
-	}
-
-	//HW Create a method that will return a List of Maps
-	
-
-	public Object [][] excelData(){
-	return	ExcelUtility.excelIntoArray(Constants.TESTDATA_FILEPATH, "Sheet1");
-		
 	}
 }
