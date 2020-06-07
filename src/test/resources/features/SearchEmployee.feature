@@ -1,17 +1,18 @@
+@searchEmployee @sprint13
 Feature: Employee Search
- Scenario: Search employee by Id
-  Given user is navigated to HRMS
-  And user logins with valid admin credentials to HRMS application
-  And user navigates to EmployeeList page
-  When user enters valid employee ID
-  And user clicks on the search button
-  Then user see employee information is displayed
-  
-Scenario: Search employee by name
-  Given user is navigated to HRMS
-  And user logins with valid admin credentials to HRMS application
-  And user navigates to EmployeeList page
-  When user enters valid employee name
-  And user clicks on the search button
-  Then user see employee information is displayed
 
+  @smoke
+  Scenario: Search employee by id
+    And user is logged with valid admin credentials
+    And user navigate to employee list page
+    When user enters valid employee id
+    And click on search button
+    Then user see employee information is displayed
+
+  @regression
+  Scenario: Search employee by name
+    And user is logged with valid admin credentials
+    And user navigate to employee list page
+    When user enters valid employee name and last name
+    And click on search button
+    Then user see employee information is displayed

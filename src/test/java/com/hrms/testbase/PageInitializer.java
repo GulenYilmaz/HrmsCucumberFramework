@@ -1,7 +1,9 @@
 package com.hrms.testbase;
 
+
 import com.hrms.pages.AddEmployeePageElements;
 import com.hrms.pages.DashboardPageElements;
+import com.hrms.pages.GoogleSearchPageElements;
 import com.hrms.pages.LoginPageElements;
 import com.hrms.pages.PersonalDetailsPageElements;
 import com.hrms.pages.ViewEmployeePageElements;
@@ -15,6 +17,7 @@ public class PageInitializer extends BaseClass{
 	public static DashboardPageElements dashboard;
 	public static PersonalDetailsPageElements pdetails;
 	public static ViewEmployeePageElements viewEmp;
+	public static GoogleSearchPageElements google;
 	
 	public static void initialize() {
 		
@@ -23,5 +26,6 @@ public class PageInitializer extends BaseClass{
 		addEmp=new AddEmployeePageElements();
 		pdetails=new PersonalDetailsPageElements();
 		viewEmp=new ViewEmployeePageElements();
+		google=new GoogleSearchPageElements();
 	}
 }
