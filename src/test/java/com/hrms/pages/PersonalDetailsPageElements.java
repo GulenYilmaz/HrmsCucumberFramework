@@ -1,6 +1,5 @@
 package com.hrms.pages;
 
-
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -22,6 +21,9 @@ public class PersonalDetailsPageElements {
 
 	@FindBy(id = "personal_txtEmployeeId")
 	public WebElement employeeId;
+	
+	@FindBy(xpath="//div[@id='profile-pic']//h1")
+	public WebElement profilePic;
 
 	public PersonalDetailsPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
