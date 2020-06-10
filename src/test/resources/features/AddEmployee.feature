@@ -46,3 +46,10 @@ Feature: Add new Employee
       | FirstName | MiddleName | LastName |
       | John      | J          | Doe      |
       | Jane      | J          | Smith    |
+      
+   @excel
+   Scenario: Adding multiple employees from excel
+   When user enters employee data from "EmployeeLoginCredentials" excel sheet then employee is added
+      
+      
+    

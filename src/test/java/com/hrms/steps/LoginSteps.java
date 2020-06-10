@@ -1,10 +1,16 @@
 package com.hrms.steps;
 
+
+
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 
 import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -59,5 +65,28 @@ public class LoginSteps extends CommonMethods{
 	@Then("User see Invalid Credentials text on login page")
 	public void user_see_Invalid_Credentials_text_on_login_page() {
 	    
+	}
+	
+	@When("user enter valid {string} and {string}")
+	public void user_enter_valid_and(String string, String string2) {
+	  
+	}
+
+	@Then("{string} is successfully logged in")
+	public void is_successfully_logged_in(String string) {
+	   
+	}
+	
+	@When("I enter invalid username and password and see error message")
+	public void i_enter_invalid_username_and_password_and_see_error_message(DataTable inavalidCredentials) {
+		List<Map<String, String>> list = inavalidCredentials.asMaps();
+		for(Map<String, String> map:list) {
+			sendText(login.username, map.get("UserName"));
+			sendText(login.password, map.get("Password"));
+			click(login.loginBtn);
+			
+			Assert.assertEquals("Not correct error message is displayed", map.get("ErrorMessage"), login.errorMsg.getText());
+		
+		}
 	}
 }

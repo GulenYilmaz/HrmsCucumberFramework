@@ -1,7 +1,7 @@
 Feature: Login
 
   #previously written test
-  @smoke
+  @maven
   Scenario: valid admin login
     When user enter valid admin username and password
     And user click on login button
@@ -30,3 +30,11 @@ Feature: Login
     When User enter valid username and invalid password
     And user click on login button
     Then User see Invalid Credentials text on login page
+
+@temp
+  Scenario: Login with invalid credentials
+    When I enter invalid username and password and see error message
+      | UserName | Password   | ErrorMessage        |
+      | Admin    | Admin123   | Invalid Credentials |
+      | Hello    | Syntax123! | Invalid Credentials |
+      
