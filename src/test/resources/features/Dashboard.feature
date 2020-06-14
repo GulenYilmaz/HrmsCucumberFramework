@@ -1,5 +1,4 @@
-#Author: gulenaltintasyilmaz@gmail.com
-
+#Author: asel@syntaxtechs.com
 Feature: Dashboard
 
 @dash

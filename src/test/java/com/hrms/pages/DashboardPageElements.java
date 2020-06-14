@@ -1,4 +1,5 @@
 package com.hrms.pages;
+
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -27,12 +28,26 @@ public class DashboardPageElements extends CommonMethods{
 	
 	@FindBy(xpath="//div[@class='menu']/ul/li")
 	public List<WebElement> dashMenu;
+	
+	@FindBy(id = "menu_admin_viewAdminModule")
+	public WebElement adminBtn ;
+
+	@FindBy(id="menu_admin_Qualifications")
+	public WebElement qualification;
+	
 
 	public DashboardPageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
 	
 	public void navigateToAddEmployee() {
+		jsClick(PIM);
+		jsClick(addEmp);
+	}
+	
+
+	
+	public void navigateToAddLanguage() {
 		jsClick(PIM);
 		jsClick(addEmp);
 	}
