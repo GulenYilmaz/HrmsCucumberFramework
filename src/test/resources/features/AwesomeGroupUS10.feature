@@ -16,3 +16,4 @@ Feature: Add Language to Employee
     Then user clicks on add language button
     And user select "Turkcee" , select "Speaking" and "Basic"
     Then user clicks on save button
+    And user language is added succesfully

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.hrms.utils.CommonMethods;
 
-public class AdminLanguagePageSteps extends CommonMethods{
+public class AwesomeGroup__US9__AdminLanguagePageElements extends CommonMethods{
 
 	
 	
@@ -24,7 +24,7 @@ public class AdminLanguagePageSteps extends CommonMethods{
 	
 	
 	
-	public AdminLanguagePageSteps () {
+	public AwesomeGroup__US9__AdminLanguagePageElements () {
 		PageFactory.initElements(driver, this);
 	}
 }

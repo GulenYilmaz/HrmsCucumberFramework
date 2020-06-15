@@ -2,7 +2,7 @@ package com.hrms.testbase;
 
 
 import com.hrms.pages.AddEmployeePageElements;
-import com.hrms.pages.AdminLanguagePageSteps;
+import com.hrms.pages.AwesomeGroup__US9__AdminLanguagePageElements;
 import com.hrms.pages.DashboardPageElements;
 import com.hrms.pages.LoginPageElements;
 import com.hrms.pages.PersonalDetailsPageElements;
@@ -19,7 +19,7 @@ public class PageInitializer extends BaseClass{
 	public static PersonalDetailsPageElements pdetails;
 	public static ViewEmployeePageElements viewEmp;
 	public static SauceDemoLoginPage sauceLogin;
-	public static AdminLanguagePageSteps language;
+	public static AwesomeGroup__US9__AdminLanguagePageElements language;
 	public static void initialize() {
 		
 		login=new LoginPageElements();
@@ -28,6 +28,6 @@ public class PageInitializer extends BaseClass{
 		pdetails=new PersonalDetailsPageElements();
 		viewEmp=new ViewEmployeePageElements();
 		sauceLogin=new SauceDemoLoginPage();
-		language=new AdminLanguagePageSteps();
+		language=new AwesomeGroup__US9__AdminLanguagePageElements();
 	}
 }

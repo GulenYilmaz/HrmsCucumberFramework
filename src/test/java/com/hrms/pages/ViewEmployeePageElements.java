@@ -1,6 +1,8 @@
 package com.hrms.pages;
 
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -40,8 +42,20 @@ public class ViewEmployeePageElements {
 	
 	@FindBy(xpath="//select[@id='language_competency']")
 	public WebElement selectCompetency;
+	
+	@FindBy(xpath="//table[@id='lang_data_table']/tbody/tr")
+	public  List<WebElement> LanguagesTable;
+	
+	@FindBy(xpath="//table[@id='lang_data_table']/tbody/tr[3]/td[2]")
+	public  WebElement LanguagesTurkcee;
+	
+	@FindBy(xpath="//table[@id='recordsListTable']/tbody/tr/td/a")
+	public List<WebElement> languageList;
+	
 
 	public ViewEmployeePageElements() {
 		PageFactory.initElements(BaseClass.driver, this);
+		
+		
 	}
 }

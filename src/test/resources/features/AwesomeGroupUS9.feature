@@ -12,5 +12,7 @@ Feature: Add Language
     And user click on add button
     And user sends "Turkcee" to language
     Then user click on save button
+    And user added language succesfully
+   
 
   
